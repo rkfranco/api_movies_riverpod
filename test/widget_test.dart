@@ -11,11 +11,12 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:get_api_movies/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('Test movies page', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
     await Future.delayed(const Duration(seconds: 2));
     await tester.pumpAndSettle();
-    await tester.tap(find.byType(Container));
+    await tester.tap(find.byType(GestureDetector));
+    tester.printToConsole('Teste');
   });
 }
