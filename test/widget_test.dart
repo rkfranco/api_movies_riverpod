@@ -5,9 +5,15 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
-
+import 'package:get_api_movies/main.dart';
 
 void main() {
-  testWidgets('Test movies page', (WidgetTester tester) async {});
+  testWidgets('Test movies page', (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp());
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byWidget(GestureDetector()));
+  });
 }
