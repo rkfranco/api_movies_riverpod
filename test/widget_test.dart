@@ -5,18 +5,9 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:get_api_movies/main.dart';
 
 void main() {
-  testWidgets('Test movies page', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
-    await Future.delayed(const Duration(seconds: 2));
-    await tester.pumpAndSettle();
-    await tester.tap(find.byType(GestureDetector));
-    tester.printToConsole('Teste');
-  });
+  testWidgets('Test movies page', (WidgetTester tester) async {});
 }
